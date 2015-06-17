@@ -1,0 +1,129 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <%= render template: "layouts/menu" %>
+  <div class="container">
+
+    <div class="col-md-9 col-sm-3 well">
+      <div class="container well-sm has-success">
+        <h2><strong><%= @attraction.name %></strong></h2>
+      </div>
+
+
+      <div class="container">
+
+        <div class="col-md-8 text-center well-sm">
+
+          <%= image_tag(@attraction.picture.url, alt: @attraction.name + " - grafika", width: "600px", height:
+                                                       "250px") %>
+        </div>
+        <div class="col-md-8 ">
+          <table class="table table-striped">
+            <tbody>
+            <tr>
+              <td class="col-md-3">
+                <strong>
+                  Opis firmy:
+                </strong>
+              </td>
+              <td>
+                <div>
+                  <%= @attraction.description %>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-md-3"><strong>Adres:</strong></td>
+              <td><%= @attraction.address %></td>
+            </tr>
+            <tr>
+              <td class="col-md-3"><strong>Godziny i dni otwarcia:</strong></td>
+              <td><%= raw(@attraction.opening_hour) %></td>
+            </tr>
+            <tr>
+              <td class="col-md-3"><strong>Czas trwania:</strong></td>
+              <td><%= @attraction.duration %></td>
+            </tr>
+            <tr>
+              <td class="col-md-3"><strong>Sposób rezerwacji:</strong></td>
+              <td> <%= raw(@attraction.reservation) %></td>
+            </tr>
+            <tr>
+              <td class="col-md-3"><strong>Dodatkowe informacje:</strong></td>
+              <td> <%= raw(@attraction.more_info) %></td>
+            </tr>
+            <tr>
+              <td class="col-md-3"><strong>Oficjalna strona:</strong></td>
+              <td><%= raw(@attraction.url) %></td>
+            </tr>
+
+            </tbody>
+          </table>
+
+          <div>
+
+            <p class="pull-right">
+
+
+     <span class="label label-success btn-link"> <%= link_to @attraction.category.name,
+                                                             category_path(@attraction.category_id) %></span>
+
+      <span class="label label-success btn-link"><%= link_to @attraction.region.name,
+                                                             region_path(@attraction.region_id) %></span>
+
+              <% @attraction.tags.each do |tag| %>
+                  <span class="label label-success btn-link"><%= link_to tag.name, tag_path(tag) %></span>
+
+              <% end %>
+
+            </p>
+
+          </div>
+        </div>
+        <div class="col-md-8 container center-block">
+          <div id="multi_markers" class=" center-block" style='width: 500px; height: 300px;'></div>
+        </div>
+
+
+        <script type="text/javascript">
+
+            var szer = <%= @attraction.latitude %>;
+            var dlu = <%= @attraction.longitude %>;
+            var naz = '<%= @attraction.name %>';
+
+            var handler = Gmaps.build('Google');
+            handler.buildMap({internal: {id: 'multi_markers'}}, function () {
+                var markers = handler.addMarkers([
+                    {
+
+                        lat: szer, lng: dlu,
+                        infowindow: '$naz'.replace('$naz', naz)
+
+
+                    }
+                ]);
+
+                handler.bounds.extendWith(markers);
+
+                handler.fitMapToBounds();
+                handler.getMap().setZoom(15);
+
+            });
+
+        </script>
+
+      </div>
+      </div>
+
+
+    <div class="col-md-3 col-sm-3 ">
+
+      <%= render template: "layouts/right-side" %>
+
+    </div>
+
+  </div>
+  <div>
+    <%= render template: "layouts/footer" %>
+  </div>
+  </div>

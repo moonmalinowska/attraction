@@ -1,0 +1,33 @@
+<h2>Lista atrakcji</h2>
+<% if @attractions.count > 0 %>
+    <table class="table table-striped table-hover ">
+
+      <tbody>
+      <% @attractions.each do |attraction| %>
+          <tr class="success">
+            <td>
+              <%= link_to attraction_path(attraction) do %>
+                  <%= image_tag(attraction.picture.url, alt: attraction.name + " - grafika", width: "100px", height: "100px", class:
+                                                 "story-img") %>
+              <% end %>
+            </td>
+            <td><%= attraction.name %></td>
+            <td><%= attraction.description %></td>
+
+
+            <td><%= link_to 'Zobacz więcej', attraction_path(attraction) %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% else %>
+
+    <div class="alert alert-dismissible alert-danger">
+
+      <h4>Uwaga!</h4>
+
+      <p>Nie posiadamy informacji o tego typu atrakcjach.</p>
+    </div>
+
+<% end %>
+<br>

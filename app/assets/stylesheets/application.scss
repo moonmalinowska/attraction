@@ -1,0 +1,15 @@
+@import "bootstrap-sprockets";
+
+@import "variables";
+
+
+$icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
+@import "bootstrap";
+@import "bootswatch";
+
+@import "social-likes-birman";
+@import "tips";
+
+body {
+  padding-top: 60px;
+}

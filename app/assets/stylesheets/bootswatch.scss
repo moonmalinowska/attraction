@@ -1,0 +1,265 @@
+// Sandstone 3.3.4
+// Bootswatch
+// -----------------------------------------------------
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+@import "variables";
+// Navbar =====================================================================
+
+.sandstone {
+  font-size: 13px;
+  line-height: 23px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $text-color
+}
+.navbar .navbar-nav {
+  color: $text-color;
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  border-color: $navbar-default-border;
+  background: $navbar-default-bg;
+  .active{
+    background-color: darken($navbar-default-bg, 55%);
+  }
+}
+.navbar-header{
+  background-color: $navbar-default-bg;
+}
+.navbar .navbar-fixed-top{
+  background-color: $navbar-default-bg;
+  color: $text-color;
+}
+.navbar-text{   color: $text-color;}
+.nav .navbar .navbar-inverse{
+  border-color: $navbar-inverse-border;
+  background-color: $navbar-default-bg;
+  color: $text-color;
+}
+.navbar .navbar-collapse {
+
+  background-color: $navbar-default-bg;
+  color: $text-color;
+  vertical-align: middle;
+}
+.navbar {
+  .nav > li > a {
+    @extend .sandstone;
+    color: $navbar-default-color  ;
+    &:hover,  &:focus {
+      color: $gray-dark;
+      background-color: #43ac6a;}}
+
+}
+> .active {
+  > a, > a:hover, > a:focus {
+    color: #2E784A;
+    background-color: $navbar-inverse-link-color; }}
+> .open {
+  > a, > a:hover, > a:focus {
+    color: yellowgreen;
+    background-color: $navbar-inverse-link-color; }
+
+
+
+  &-form input,
+  &-form .form-control {
+    border: none;
+  }
+}
+
+.navbar-text {
+  color: yellowgreen; }
+.navbar-nav {
+  > li {
+    > a {
+      color: yellowgreen;
+      &:hover,  &:focus {
+        color: yellowgreen; }}
+
+  }
+  > .active {
+    > a, > a:hover, > a:focus {
+      color: yellowgreen;
+      background-color: yellowgreen; }}
+  > .open {
+    > a, > a:hover, > a:focus {
+      color: yellowgreen;
+      background-color: yellowgreen; }}}
+body {
+  padding-top: 55px;
+}
+
+// Buttons ====================================================================
+
+.btn {
+  border: none;
+  background-color: $brand-success;
+  @extend .sandstone;
+
+  &:hover {
+    border-color: transparent;
+  }
+
+  &-lg {
+    line-height: 26px;
+  }
+
+  &-default {
+    &:hover {
+      background-color: $navbar-default-link-active-bg;
+    }
+  }
+}
+
+// Typography =================================================================
+
+// Tables =====================================================================
+table {
+  horiz-align: center;
+}
+// Forms ======================================================================
+
+input,
+.form-control {
+   box-shadow: (none);
+
+  &:focus {
+    border-color: $input-border;
+    box-shadow: (none);
+  }
+}
+
+// Navs =======================================================================
+
+.nav {
+  @extend .sandstone;
+
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: $gray-light;
+    color: $text-color;
+  }
+}
+
+.nav-tabs {
+
+  & > li > a {
+    background-color: $gray-lighter;
+    border-color: $nav-tabs-border-color;
+    color: #fff;
+  }
+
+  > li.disabled > a:hover {
+    background-color: $brand-success;
+  }
+}
+
+.nav-pills {
+  a {
+    color: $text-color;
+  }
+
+  li > a {
+    border: 1px solid transparent;
+  }
+
+  li.active > a,
+  li > a:hover {
+    border-color: $gray-light;
+  }
+
+  li.disabled > a {
+    border-color: transparent;
+  }
+}
+
+.breadcrumb {
+  @extend .sandstone;
+
+  border: 1px solid $gray-light;
+
+  a {
+    color: $gray;
+  }
+}
+
+.pagination {
+  @extend .sandstone;
+}
+
+.pager {
+  @extend .sandstone;
+
+  li > a {
+    color: $gray;
+  }
+}
+
+.dropdown-menu {
+  & > li > a {
+    @extend .sandstone;
+  }
+}
+
+// Indicators =================================================================
+
+.alert {
+
+  a,
+  .alert-link {
+    color: #fff;
+  }
+}
+
+.tooltip {
+  @extend .sandstone;
+}
+
+// Progress bars ==============================================================
+
+.progress {
+  border-radius: 10px;
+  background-color: $gray-light;
+  box-shadow: (none);
+
+  &-bar {
+    box-shadow: (none);
+  }
+}
+
+// Containers =================================================================
+
+.list-group {
+  &-item {
+    padding: 16px 24px;
+  }
+}
+
+.well {
+  box-shadow: (none);
+}
+
+.panel {
+  box-shadow: (none);
+
+  .panel-heading,
+  .panel-title {
+    @extend .sandstone;
+    color: #fff;
+  }
+
+  .panel-footer {
+    @extend .sandstone;
+  }
+
+  &-default {
+    .panel-heading,
+    .panel-title,
+    .panel-footer {
+      color: $gray;
+    }
+  }
+}

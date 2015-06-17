@@ -1,0 +1,12 @@
+<%= form_for @search_term, as: :search, url: search_path do |f| %>
+
+    <span class="input-group-btn">
+      <%= text_field_tag :q, params[:q], :class => "form-control", :placeholder => "Szukaj..." %>
+
+      <%= button_tag(type: 'submit', class: "btn btn-success", name: nil,
+                     :remote => true) do %>
+<span class="glyphicon glyphicon-search"></span>
+      <% end %>
+
+</span>
+<% end %>

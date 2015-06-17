@@ -1,0 +1,95 @@
+<div class="container">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Rozwiń nawigację</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+        </button>
+        <a class="navbar-brand" href="#">"Logo strony"</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", static_page_home_path %></li>
+          <li><%= link_to "Wycieczki po fabrykach", static_page_trips_path %></li>
+          <li><%= link_to "Muzea techniczne", static_page_museums_path %></li>
+          <li><%= link_to "Targi technologiczne", static_page_fairs_path %></li>
+
+          <li><%= link_to "Wskazówki dla podróżnych", static_page_tips_path %></li>
+          <li class="active"><%= link_to "Wyszukiwarka atrakcji", static_page_search_path %><span class="sr-only">
+          (current)</span></li>
+
+        </ul>
+
+      </div>
+    
+  </nav>
+  <div class="col-md-9 col-sm-9 ">
+    <div class="well col-md-12 col-sm-9">
+      <%= form_for @search_term, as: :search, url: search_path do |f| %>
+          <p>
+            <%= f.label "Szukaj" %>
+            <%= text_field_tag :q, params[:q], class: "form-control", placeholder: 'Szukaj...' %><br/>
+            <%= label :category, "Kategoria" %><br/>
+            <%= select_tag(:category_id, options_from_collection_for_select(Category.all, 'id', 'name'), :prompt =>
+                                               "Wybierz kategorię") %><br/>
+            <%= label :region, "Region" %><br/>
+            <%= select_tag(:region_id, options_from_collection_for_select(Region.all, 'id', 'name'),
+                           :prompt => "Wybierz region") %><br/>
+            <%= button_tag(type: 'submit', class: "btn btn-success pull-right") do %>
+                <span class="glyphicon glyphicon-search"> Szukaj </span>
+            <% end %>
+          </p>
+      <% end %>
+    </div>
+    <div class="col-md-12 well">
+      <h3>Wyniki wyszukiwania:</h3>
+      <% if @results.present? %>
+
+
+          <table class="table table-striped table-hover">
+            <thead>
+            <th>Nazwa atrakcji</th>
+            </thead>
+            <tbody>
+
+            <% @results.each do |result| %>
+                <tr class="success">
+                  <td><%= link_to result.name, attraction_path(result.id) %></td>
+
+
+                </tr>
+
+            <% end %>
+
+            </tbody>
+          </table>
+      <% else %>
+
+          <div class="text-uppercase">
+            <p>
+              Nie znaleziono.
+            </p>
+          </div>
+
+      <% end %>
+    </div>
+  </div>
+
+  <div class="col-md-3 col-sm-3 ">
+    <%= render template: "layouts/right-side" %>
+  </div>
+
+  <br \><br \><br \>
+</div>
+
+    <%= render template: "layouts/footer" %>
+
+

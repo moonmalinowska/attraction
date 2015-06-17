@@ -1,0 +1,620 @@
+<div class="container">
+  <nav class="navbar navbar-default navbar-fixed-top">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+          <span class="sr-only">Rozwiń nawigację</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+        </button>
+        <a class="navbar-brand" href="#">"Logo strony"</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", static_page_home_path %></li>
+          <li><%= link_to "Wycieczki po fabrykach", static_page_trips_path %></li>
+          <li><%= link_to "Muzea techniczne", static_page_museums_path %></li>
+          <li><%= link_to "Targi technologiczne", static_page_fairs_path %></li>
+
+          <li class="active"><%= link_to "Wskazówki dla podróżnych", static_page_tips_path %><span class="sr-only">
+          (current)</span></li>
+          <li><%= link_to "Wyszukiwarka atrakcji", static_page_search_path %></li>
+
+        </ul>
+
+      </div>
+
+  </nav>
+  <div class="container">
+    <h3>Wskazówki dla osób podróżujących do Japonii</h3>
+  </div>
+
+  <div class="col-md-9 col-sm-8">
+
+    <div class="panel-group" id="accordion">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+              WIZA I PRZEPISY WJAZDOWE
+            </a>
+          </h4>
+        </div>
+        <!--/.panel-heading -->
+        <div id="collapseOne" class="panel-collapse collapse">
+          <div class="panel-body">
+
+            <!-- nested -->
+
+
+            <div class="panel-group" id="nested">
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#nested" href="#nested-collapseOne">
+                      Wiza
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapseOne" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    Obywatele polscy mogą wjechać do Japonii na <strong>90 dni, bez konieczności posiadania wizy.
+                  </strong>Dłuższy pobyt wymaga uzyskania wizy w konsulacie japońskim na terenie Polski. Nie ma
+                    możliwości
+                    uzyskania wizy na granicy.<br/><br/>
+                    Przy wjeździe bez wizy, paszport powinien być ważny co najmniej 3 miesiące dłużej niż data
+                    planowanego wyjazdu z Japonii. W przypadku wjazdu na podstawie wizy, ważność paszportu powinna
+                    być na tyle długa, aby umożliwić powrót do kraju w okresie jego ważności.<br/><br/>
+                    Możliwość przedłużenia pobytu w Japonii (ponad 90 dni bez wizy) istnieje jedynie w przypadku
+                    ważnych sytuacjach losowych. Konieczne jest wówczas złożenie odpowiedniego wniosku w urzędzie
+                    imigracyjnym w Tokio. Należy to zrobić co najmniej 10 dni przed wygaśnięciem prawa pobytu.<br/>
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+              <!-- /.panel -->
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseTwo">
+                      Decyzja o pozwoleniu na wjazd
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapseTwo" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Decyzja o pozwoleniu na wjazd podejmowana jest przez urzędnika imigracyjnego na przejściu
+                    granicznym. Warto jest posiadać bilet powrotny lub środki na jego zakup, co może mieć wpływ na
+                    decyzję urzędnika. Urzędnicy imigracyjni mogą zażądać wykazu posiadanych środków finansowych. Na
+                    ich podstawie ocenią, czy posiadamy wystarczającą ilość pieniędzy na pokrycie kosztów pobytu. W
+                    przypadku braku odpowiednich środków, urzędnik prawdopodobnie nie wyrazi zgody na wjazd do
+                    Japonii.
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseThree">
+                      Przepisy celne
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapseThree" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Do Japonii można przywieźć dowolną ilość pieniędzy. Jedynie kwoty przekraczające 1 mln JPY (w
+                    przeliczeniu na walutę japońską) oraz złoto w sztabkach muszą zostać zgłoszone. <br/><br/>Towary
+                    zwolnione z cła to: ubrania,przedmioty osobistego użytku, kosmetyki. <br/><br/>
+                    Alkohol i wyroby tytoniowe mogą bez cła wwozić osoby dorosłe (po ukończeniu 20. roku życia).<br/>
+                    Można je wwozić w następujących ilościach:
+                    <ul>
+                      <li>3 butelki alkoholu (1 butelka = ok. 760 cc),</li>
+                      <li>cygara (100 szt.),</li>
+                      <li>papierosy (400 szt.),</li>
+                      <li>inny rodzaj tytoniu (500 g).</li>
+                    </ul>
+                    <br/>
+                    Ponadto 2 uncje perfum (1 uncja = ok. 28 cc), prezenty i przedmioty osobistego użytku (ilość
+                    nie może sugerować zamiarów handlowych), których łączna wartość (w cenach z kraju zakupu) nie
+                    przekracza 200 tys. JPY.<br/><br/>
+                    Zwierzęta mogą być wwożone pod warunkiem przedstawienia ich świadectwa zdrowia (dodatkowo
+                    koty i psy obowiązuje zaświadczenie o szczepieniu przeciwko wściekliźnie). <br/><br/>
+                    <strong>Obowiązuje zakaz wwożenia:</strong>
+                    <ul>
+                      <li>żywności pochodzenia zwierzęcego,</li>
+                      <li>owoców,</li>
+                      <li>roślin,</li>
+                      <li>nasion,</li>
+                      <li>kwiatów.</li>
+                    </ul>
+                    <br/>
+                    Ponadto obowiązuje <strong>bezwzględny zakaz wwożenia</strong> narkotyków, stymulantów, substancji
+                    psychotropowych, przedmiotów imitujących monety czy papierowe banknoty, książek, rysunków i
+                    innych przedmiotów o treści pornograficznej, przedmiotów chronionych prawem patentowym (np.
+                    projekty z prawami autorskimi), broni i amunicji.
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+
+            </div>
+
+          </div>
+          <!--/.panel-body -->
+        </div>
+        <!--/.panel-collapse -->
+      </div>
+      <!-- /.panel -->
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+              PIENIĄDZE I KARTY PŁATNICZE
+            </a>
+          </h4>
+        </div>
+        <!--/.panel-heading -->
+
+        <div id="collapseTwo" class="panel-collapse collapse">
+          <div class="panel-body">
+
+            <!-- nested -->
+
+            <div class="panel-group" id="nested">
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#nested" href="#nested-collapseFour">
+                      Waluta i jej wymiana
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapseFour" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    Walutą obowiązującą w Japonii jest jen (JPY). Jeden jen nie dzieli się na mniejsze jednostki.
+                    <br/>
+                    Kurs jena (dane z 15 czerwca 2015):
+                    <ul>
+                      <li>1 PLN = 33,40 JPY,</li>
+                      <li>1 EUR = 138,68 JPY,</li>
+                      <li>1 USD = 123,41 JPY.</li>
+                    </ul>
+
+                    <br/>
+                    Pieniądze można wymieniać w bankach lub kantorach wymiany walut za okazaniem paszportu. W Japonii
+                    funkcjonuje niewiele kantorów, najczęściej spotykane są w urzędach i punktach pocztowych.
+                    Dobrze jest zabrać ze sobą nowe banknoty dolarowe. Ważne by były możliwie jak najmniej zniszczone
+                    i popisane.
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+              <!-- /.panel -->
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseFive">
+                      Karty płatnicze
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapseFive" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Korzystanie z kart płatniczych wydanych w Polsce jest ograniczona, nie wszystkie są
+                    honorowane. Najbezpieczniej jest używać kart VISA i MasterCard, są one zazwyczaj akceptowane
+                    w dużych hotelach, restauracjach, centrach handlowych i głównych oddziałach banków. Ze względu na
+                    ograniczoną możliwość płatności kartami płatniczymi zaleca się zabranie ze sobą gotówki.
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+
+            </div>
+
+          </div>
+          <!--/.panel-body -->
+        </div>
+        <!--/.panel-collapse -->
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+              ZDROWIE
+            </a>
+          </h4>
+        </div>
+        <!--/.panel-heading -->
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+
+            <!-- nested -->
+
+
+            <div class="panel-group" id="nested">
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#nested" href="#nested-collapseSix">
+                      Szczepienia i leki
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapseSix" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                    Udając się do Japonii <strong>nie ma obowiązkowych szczepień</strong>. W przypadku stałego
+                    zażywania leków należy zabrać ich zapas na cały planowany pobyt oraz posiadać odpowiedni list
+                    od lekarza w języku angielskim (opis choroby i zażywanych leków – może być potrzebny w
+                    przypadku kontroli celnej). W Japonii często zdarzają się wysokie skoki ciśnienia (ważne dla
+                    osób chorujących na choroby przewlekle), a stężenie alergenów jest wysokie przez cały rok,
+                    szczególnie wiosną.
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+              <!-- /.panel -->
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseSeven">
+                      Usługi medyczne
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapseSeven" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    W Japonii jest duża konkurencja w zakresie usług medycznych. Ceny wizyt lekarskich w Tokio wahają
+                    się w granicach 8-25 tys. JPY, natomiast doba szpitalna to 10-30 tys. JPY. Przy dłuższym pobycie,
+                    warto opłacić Międzynarodowe Ubezpieczenie Lekarskie.
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapseEight">
+                      Ubezpieczenie
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapseEight" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <strong>Polisy polskich firm ubezpieczeniowych nie są z reguły honorowane</strong>. Przed
+                    wyjazdem należy sprawdzić, czy wykupione ubezpieczenie jest ważne w Japonii. Dobrze jest
+                    posiadać nazwę i numer
+                    telefonu miejscowego przedstawicielstwa firmy ubezpieczeniowej.
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!--/.panel-body -->
+        </div>
+        <!--/.panel-collapse -->
+      </div>
+
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+              PODRÓŻOWANIE PO KRAJU
+            </a>
+          </h4>
+        </div>
+        <!--/.panel-heading -->
+        <div id="collapseFour" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div>
+              Nie ma ograniczeń, jeśli chodzi o poruszaniu się po Japonii. Kraj ten ma bardzo dobrze rozwiniętą sieć
+              połączeń autobusowych, kolejowych oraz lotniczych. W Tokio doskonale funkcjonuje metro i kolej. Bilety
+              kolejowe kupuje się w automatach, autobusowe u kierowcy lub w automatach znajdujących się na tyle pojazdu.
+              Środki transportu są szybkie i punktualne. Należy jednak pamiętać o tym, że większość informacji na ich
+              temat pisana jest po japońsku.<br/><br/>
+            </div>
+            <!-- nested -->
+
+
+            <div class="panel-group" id="nested">
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapse1">
+                      Rodzaje pociągów
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapse1" class="panel-collapse collapse">
+                  <div class="panel-body">
+
+                    Rodzaje pociągów w Japonii:
+
+                    <ul>
+                      <li><em>kakueki-teisha/futsu-densha</em> - pociągi lokalne, zatrzymują się na każdej stacji;</li>
+                      <li><em>kaisoku</em> - pociągi pospieszne, omijają niektóre stacje;</li>
+                      <li><em>kyuko</em> - pociągi ekspresowe, omijają więcej stacji niż kaisoku;</li>
+                      <li><em>tokkyu</em> - „ograniczone pociągi ekspresowe”, zatrzymują się tylko na wybranych
+                        stacjach;
+                      </li>
+                      <li><em>shinkansen</em> - superszybkie pociągi jeżdżące na liniach kolei dużych prędkości.</li>
+                    </ul>
+
+
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+              <!-- /.panel -->
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapse2">
+                      Japan Rail Pass
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Dla turystów podróżujących po Japonii została przygotowana specjalna oferta w postaci <strong>biletu
+                    sieciowego</strong> (Japan Rail Pass) umożliwiającego podróżowanie większością japońskich
+                    pociągów w okresie ważności biletu. Japońska kolej jest podzielona na kilka obszarów (Kansai, East,
+                    Hokkaido, Kyushu, West,
+                    Shikoku). Każdy z regionów ma swój regionalny JR Pass, którego cena przekłada się na odpowiedni
+                    upust w stosunku do biletu na cały kraj. Bilet można kupić na okres od 1 do 3 tygodni.
+                    Więcej informacji na <a href=”www.jrpass.com”>jrpass.com</a>.
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapse3">
+                      Informacje dla kierowców
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapse3" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    W Japonii obowiązuje <strong> ruch lewostronny</strong>. Autostrady, drogi szybkiego ruchu,
+                    przejazdy tunelami są płatne. Można parkować tylko w wyznaczonych miejscach.<br/><br/>
+                    Wydane w Polsce międzynarodowe<strong> prawo jazdy może nie być honorowane</strong> przez władze
+                    japońskie (Polska i
+                    Japonia ratyfikowały różne konwencje). Procedura ubiegania się o japońskie prawo jazdy
+                    uniemożliwia prowadzenie pojazdu podczas krótkiego turystycznego pobytu w tym kraju. Aby uzyskać
+                    japońskie prawo jazdy podczas dłuższego pobytu, należy posiadać kartę pobytu oraz tłumaczenie
+                    polskiego prawa jazdy na język japoński. Z tymi dokumentami należy udać się do japońskiego urzędu
+                    komunikacyjnego. Trzeba tam przejść badanie wzroku i poddać się uproszczonemu testowi sprawdzającemu
+                    umiejętność jazdy.
+
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!--/.panel-body -->
+        </div>
+        <!--/.panel-collapse -->
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+              UWARUNKOWANIA GEOGRAFICZNE
+            </a>
+          </h4>
+        </div>
+        <!--/.panel-heading -->
+        <div id="collapseFive" class="panel-collapse collapse">
+          <div class="panel-body">
+
+            <!-- nested -->
+
+
+            <div class="panel-group" id="nested">
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapse11">
+                      Klimat
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapse11" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Ze względu na południkową rozciągłość Japonii klimat jest bardzo zróżnicowany, jednak można
+                    wyszczególnić w nim cztery pory roku. Latem klimat jest uciążliwy – wysokie temperatury i duża
+                    wilgotność powietrza. Szczególnie w sierpniu należy bronić się przed agresywnym słońcem stosując
+                    wysokie filtry UV. W okresie późnego lata i wczesnej jesieni, występują w tajfuny, czasami wraz z
+                    opadami. Zima, w wielu rejonach Japonii (zwłaszcza w górzystych), to okres bardzo obfitych opadów
+                    śniegu.
+
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+              <!-- /.panel -->
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapse21">
+                      Trzęsienia ziemi
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapse21" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Japonia należy do najbardziej aktywnych sejsmicznie obszarów na świecie. Ze wszystkich wstrząsów
+                    skorupy ziemskiej, aż 10% występuje na terytorium tego kraju. Przeciętnie notuje się tu 5 tysięcy
+                    wstrząsów w ciągu roku, w tym około tysiąc odczuwalnych dla człowieka.<br/><br/>
+                    <h5><strong>Zachowanie podczas trzęsienia ziemi</strong></h5>
+                    Przede wszystkim należy zachować spokój. Jeśli w trakcie trzęsienia ziemi znajdujemy się w budynku,
+                    należy w nim pozostać, chyba że ktoś wyraźnie nakaże nam postąpić inaczej. Konstrukcje japońskich
+                    budynków mają wiele zabezpieczeń przeciwko wstrząsom i najczęściej to w nich jesteśmy
+                    najbezpieczniejsi. Istotne jest, żeby jak najszybciej wejść pod stół, biurko lub inne miejsce, które
+                    nas osłoni, aby uniknąć obrażeń, które mogą spowodować spadające przedmioty. W przypadku, kiedy
+                    znajdujemy się na zewnątrz, można położyć się na ziemi (tak robi większość Japończyków), osłonić
+                    głowę, np. torbą, i czekać na koniec wstrząsów.
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+
+            </div>
+
+          </div>
+
+          <!--/.panel-body -->
+        </div>
+        <!--/.panel-collapse -->
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+              PRZYDATNE INFORMACJE KONTAKTOWE
+            </a>
+          </h4>
+        </div>
+        <!--/.panel-heading -->
+        <div id="collapseSix" class="panel-collapse collapse">
+          <div class="panel-body">
+
+            <!-- nested -->
+
+
+            <div class="panel-group" id="nested">
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapse111">
+                      Ambasada RP
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapse111" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <h4><strong>Ambasada RP w Japonii</strong></h4>
+
+                    <p>
+                      <strong>Adres:</strong> 2-13-5 Mita, Meguro-ku, Tokyo 153-0062.<br/>
+                      <strong>Telefon:</strong> (81) 3 5794 7020 lub (81) 80 4610 7020 (telefon alarmowy).<br/>
+                      <strong>E-mail:</strong> tokio.amb.sekretariat@msz.gov.pl<br/>
+                    </p>
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+              <!-- /.panel -->
+
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#nested" href="#nested-collapse211">
+                      Numery alarmowe
+                    </a>
+                  </h4>
+                </div>
+                <!--/.panel-heading -->
+                <div id="nested-collapse211" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>
+                      Policja: <strong>100</strong>.<br/>
+                      Straż pożarna: <strong>119</strong>.<br/>
+                      Pogotowie ratunkowe: <strong>119</strong>.<br/>
+                      Pomoc na morzu: <strong>118</strong>.
+                    </p>
+
+                  </div>
+                  <!--/.panel-body -->
+                </div>
+                <!--/.panel-collapse -->
+              </div>
+
+            </div>
+
+          </div>
+
+          <!--/.panel-body -->
+        </div>
+        <!--/.panel-collapse -->
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+  <div class="col-md-3 col-sm-4">
+    <%= render template: "layouts/right-side" %>
+  </div>
+</div>
+<!-- /.container -->
+<br \><br \><br \>
+
+<div>
+  <%= render template: "layouts/footer" %>
+</div>
+

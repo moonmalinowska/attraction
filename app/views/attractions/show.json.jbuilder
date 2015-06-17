@@ -1,0 +1,1 @@
+json.extract! @attraction, :id, :name, :description, :address, :opening_hour, :duration, :reservation, :more_info, :picture, :url, :category_id, :region_id, :variety_id, :latitude, :longitude, :created_at, :updated_at
