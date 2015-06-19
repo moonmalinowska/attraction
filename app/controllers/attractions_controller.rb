@@ -34,6 +34,7 @@ class AttractionsController < ApplicationController
                          "height" => 32
                      })
     end
+
   end
 
   # GET /attractions/new

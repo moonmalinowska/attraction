@@ -41,4 +41,7 @@ class ApplicationController < ActionController::Base
     @categories = Category.all
   end
 
+  def reg
+    @regions = Region.all
+  end
 end

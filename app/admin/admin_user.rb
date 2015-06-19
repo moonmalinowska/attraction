@@ -24,5 +24,5 @@ ActiveAdmin.register AdminUser do
     end
     f.actions
   end
-
+  menu label: "Administratorzy"
 end

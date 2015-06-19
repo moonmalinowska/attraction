@@ -10,5 +10,6 @@ class Region < ActiveRecord::Base
 
   validates :name, presence: true, length: {within: 2..100}
 
-  Region.import
+
 end
+Region.import

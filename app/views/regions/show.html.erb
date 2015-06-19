@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<%= content_for :title, "Atrakcje przemysłowe w Japonii w regionie " + @region.name %>
 <div class="container">
 
   <div class="container-fluid">
@@ -9,7 +10,7 @@
 
     <div class="col-md-9 col-sm-9">
       <div>
-        <p>
+        <p class="jumbotron">
 
           Atrakcje znajdujące się w: <strong class="text-uppercase"><%= @region.name %></strong>
         </p>
@@ -21,45 +22,48 @@
 
                 <tr class="success">
 
-                  <td>
+                  <td class="col-md-3">
                     <%= link_to attraction_path(attr) do %>
-                        <%= image_tag(attr.picture.url, alt: attr.name + " - grafika", width: "100px", height: "100px", class:
-                                                       "story-img ") %>
+                        <%= image_tag(attr.picture.url, alt: attr.name + " - grafika", width: "150px", height:
+                                                              "100px", class: "story-img ") %>
                     <% end %>
                   </td>
 
-                  <td class="col-md-3"><%= attr.name %></td>
-                  <td class="col-md-5"><%= attr.description %></td>
+                  <td class="col-md-7"><%= attr.name %></td>
                   <td class="col-md-2"><%= link_to "Zobacz więcej", attraction_path(attr) %></td>
 
                 </tr>
 
 
-
                 </tbody>
             <% end %>
           </table>
+          <div class="pagination">
+            <div class="page_info">
+              <%= page_entries_info @reg %>
+            </div>
+            <%= will_paginate @reg, :container => false %>
+          </div>
       <% else %>
 
           <div class="alert alert-dismissible alert-warning text-uppercase text-center">
 
             <h4>Uwaga!</h4>
+
             <p>W tym regionie nie ma żadnych atrakcji związanych z technologią.</p>
           </div>
 
       <% end %>
 
     </div>
+
     <div class="col-md-3 col-xs-5 ">
       <%= render template: "layouts/right-side" %>
     </div>
 
-
-
-    <%= link_to 'Edit', edit_region_path(@region) %>
-    <%= link_to 'Back', regions_path %>
   </div>
-  <div>
-    <%= render template: "layouts/footer" %>
-  </div>
+</div>
+<div>
+  <%= render template: "layouts/footer" %>
+
 </div>

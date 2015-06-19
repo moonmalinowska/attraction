@@ -14,5 +14,5 @@ ActiveAdmin.register Variety do
   #   permitted
   # end
 
-
+   menu label: "Rodzaje"
 end

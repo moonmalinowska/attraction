@@ -16,7 +16,6 @@ class SearchController < ApplicationController
 
   def calculate_results
     @results.flatten!
-
     filtered_res = if @cat_id.present? && @region_id.present?
                      @results.select { |res| res.try(:category_id) == @cat_id.to_i && res.try(:region_id) == @region_id.to_i }
                    elsif @cat_id.present? ^ @region_id.present?
@@ -33,5 +32,8 @@ class SearchController < ApplicationController
     @region_id = params[:region_id]
     @categories = Category.all
   end
+
+
+    @regions=Region.all
 
 end

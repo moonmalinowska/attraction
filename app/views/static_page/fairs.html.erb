@@ -1,7 +1,7 @@
-<p id="notice"><%= notice %></p>
+<%= content_for :title, "Atrakcje przemysłowe w Japonii - targi technologiczne" %>
 <div class="container-fluid">
   <div class="container">
-  <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
 
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
@@ -12,7 +12,10 @@
           <span class="icon-bar"></span>
 
         </button>
-        <a class="navbar-brand" href="#">"Logo strony"</a>
+        <%= link_to root_path do %>
+            <%= image_tag('logo.png', alt: "Atrakcje przemysłowe Japonii - logo",
+                          class: "navbar-brand") %>
+        <% end %>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -30,78 +33,78 @@
 
       </div>
 
+    </nav>
+  </div>
   </nav>
-</div>
-</nav>
 </div>
 <div class="container">
 
 
-  <div class="col-md-9 col-sm-9">
-    <h1>Nagłówek</h1>
+  <div class="col-md-9 col-sm-9 well">
+    <div class="well">
+      <h1 class="ziel">Targi technologiczne</h1>
 
 
-    <p class="lead">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed interdum sapien. Lorem ipsum dolor sit
-      amet,
-      consectetur adipiscing elit.
-    </p>
-    <br \>
-
-    <h2>Wybrane targi technologiczne</h2>
-    <br \>
-
-    <% @variety.attractions.limit(3).order("RANDOM()").each do |attraction| %>
-        <div class="col-md-4 text-center">
-          <table class="table table-striped table-hover ">
-            <tbody>
-            <tr class="success">
-              <td>
-                <div>
-                  <%= link_to attraction_path(attraction) do %>
-                      <%= image_tag(attraction.picture.url, alt: attraction.name + " - grafika", width: "250px", height: "200px",
-                                    class:
-                                                     "story-img") %>
-                  <% end %>
-                </div>
+      <p class="lead">
+        Japonia znana jest z bardzo szybkiego tempa rozwoju wszelakich technologii. Rocznie, organizowanych jest tam
+        setki targów technologicznych. <br/>Bądź na bieżąco, znajdź interesujące Cię targi!
+      </p>
+      <br \>
 
 
-                <div><h3><%= attraction.name %> </h3></div>
-                <div> <%= link_to "Zobacz więcej", attraction_path(attraction) %>   </div>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-    <% end %>
+      <h2 class="ziel">Wybrane targi technologiczne</h2>
+      <br />
 
-    <div class="container"></div>
-
-    <div class="col-md-12 text-center">
-      <% if @variety.attractions.count > 0 %>
-
-
-          <%= button_to "Zobacz wszystkie", variety_path(@variety.id),
-                        :class => "btn btn-success btn-lg", :method => :get %>
+      <% @variety.attractions.limit(3).order("RANDOM()").each do |attraction| %>
+          <div class="col-md-4 text-center">
+            <table class="table table-striped table-hover ">
+              <tbody>
+              <tr class="success">
+                <td class="col-md-4 wysoko">
+                  <div>
+                    <%= link_to attraction_path(attraction) do %>
+                        <%= image_tag(attraction.picture.url(:thumb), alt: attraction.name + " - grafika",
+                                      class: "img-resposive col-md-12") %>
+                    <% end %>
+                  </div>
 
 
-      <% else %>
-
-          <div class="alert alert-dismissible alert-warning text-uppercase">
-
-            <h4>Uwaga!</h4>
-
-            <p>
-              <%= @variety.name %> nie są obecnie dostępne!
-            </p>
+                  <div><h4><%= attraction.name %> </h4></div>
+                  <div> <%= link_to "Zobacz więcej", attraction_path(attraction) %>   </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
           </div>
-
       <% end %>
 
-    </div>
+      <div class="container"></div>
 
+      <div class="col-md-12 text-center">
+        <% if @variety.attractions.count > 0 %>
+
+
+            <%= button_to "Zobacz wszystkie", variety_path(@variety.id),
+                          :class => "btn btn-success btn-lg", :method => :get %>
+
+
+        <% else %>
+
+            <div class="alert alert-dismissible alert-warning text-uppercase">
+
+              <h4>Uwaga!</h4>
+
+              <p>
+                <%= @variety.name %> nie są obecnie dostępne!
+              </p>
+            </div>
+
+        <% end %>
+
+      </div>
+    </div>
   </div>
-  <div class="col-md-3 col-xs-3 ">
+  <div class="col-md-3 col-xs-3 well-sm ">
     <%= render template: "layouts/right-side" %>
   </div>
 </div>

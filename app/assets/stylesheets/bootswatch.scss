@@ -2,7 +2,7 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+@import url("http://fonts.googleapis.com/css?family=Istok+Web&subset=latin,latin-ext");
 @import "variables";
 // Navbar =====================================================================
 
@@ -42,6 +42,7 @@
   background-color: $navbar-default-bg;
   color: $text-color;
   vertical-align: middle;
+  text-align: center;
 }
 .navbar {
   .nav > li > a {
@@ -49,7 +50,9 @@
     color: $navbar-default-color  ;
     &:hover,  &:focus {
       color: $gray-dark;
-      background-color: #43ac6a;}}
+      background-color: #43ac6a;
+    }
+  }
 
 }
 > .active {

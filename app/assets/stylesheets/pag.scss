@@ -1,0 +1,63 @@
+//colors
+$color_silver_chalice_approx: #aaaaaa;
+$color_rose_approx: #0C8346;
+$color_alto_approx: #dddddd;
+$color_science_blue_approx: #0C8346;
+$midnight_blue: #393A35;
+$white: white;
+
+//@extend-elements
+//original selectors
+//.flickr_pagination a:hover, .flickr_pagination a:focus
+%extend_1 {
+  border-color: $midnight_blue;
+  background: $color_science_blue_approx;
+  color: $white;
+}
+
+
+.pagination {
+  vertical-align: middle;
+  horiz-align: center;
+  text-align: center;
+  padding: 0.3em;
+  cursor: default;
+  a {
+    padding: 0.2em 0.5em;
+    border: 1px solid $color_alto_approx;
+    color: $color_science_blue_approx;
+    text-decoration: none;
+    &:hover {
+      @extend %extend_1;
+    }
+    &:focus {
+      @extend %extend_1;
+    }
+  }
+  span {
+    padding: 0.2em 0.5em;
+  }
+  em {
+    padding: 0.2em 0.5em;
+  }
+  .disabled {
+    color: $color_silver_chalice_approx;
+  }
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    color: $color_rose_approx;
+  }
+  .page_info {
+    color: $color_silver_chalice_approx;
+    padding-top: 0.8em;
+  }
+  .previous_page {
+    border-width: 2px;
+    margin-right: 1em;
+  }
+  .next_page {
+    border-width: 2px;
+    margin-left: 1em;
+  }
+}

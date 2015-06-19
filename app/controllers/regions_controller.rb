@@ -12,6 +12,8 @@ class RegionsController < ApplicationController
   # GET /regions/1.json
   def show
     @categories = Category.all
+    only_region = @region.attractions
+    @reg = only_region.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /regions/new

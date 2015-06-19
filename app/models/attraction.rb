@@ -16,7 +16,7 @@ class Attraction < ActiveRecord::Base
   acts_as_taggable
   @tags = Attraction.tag_counts_on(:tags)
 
-  has_attached_file :picture, :default_url => "/images/:style/missing.png", styles: {thumb: "300x300"}
+  has_attached_file :picture, :default_url => "/images/:style/missing.png", styles: {thumb: "250x200"}
   validates_attachment_content_type :picture, :content_type => /\Aimage\/.*\Z/
 
   geocoded_by :address
@@ -58,6 +58,7 @@ class Attraction < ActiveRecord::Base
   #                     }
 
 
-  Attraction.import
+
 
 end
+Attraction.import

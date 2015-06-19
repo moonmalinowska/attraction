@@ -14,5 +14,5 @@ ActiveAdmin.register Category do
   #   permitted
   # end
 
-
+   menu label: "Kategorie"
 end

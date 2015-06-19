@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<%= content_for :title, "Atrakcje przemysłowe w Japonii - " + @attraction.name %>
 <div class="container">
   <%= render template: "layouts/menu" %>
   <div class="container">
@@ -14,8 +14,8 @@
 
         <div class="col-md-8 text-center well-sm">
 
-          <%= image_tag(@attraction.picture.url, alt: @attraction.name + " - grafika", width: "600px", height:
-                                                       "250px") %>
+          <%= image_tag(@attraction.picture.url, alt: @attraction.name + " - grafika", width: "450px", height:
+                                                       "250px", class: "img-responsive center-block ram") %>
         </div>
         <div class="col-md-8 ">
           <table class="table table-striped">
@@ -54,7 +54,8 @@
             </tr>
             <tr>
               <td class="col-md-3"><strong>Oficjalna strona:</strong></td>
-              <td><%= raw(@attraction.url) %></td>
+              <td><%= raw (@attraction.url) %></td>
+
             </tr>
 
             </tbody>
@@ -81,7 +82,7 @@
           </div>
         </div>
         <div class="col-md-8 container center-block">
-          <div id="multi_markers" class=" center-block" style='width: 500px; height: 300px;'></div>
+          <div id="multi_markers" class=" center-block img-responsive" style='width: 500px; height: 300px;'></div>
         </div>
 
 

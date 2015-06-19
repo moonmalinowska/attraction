@@ -14,5 +14,5 @@ ActiveAdmin.register Region do
   #   permitted
   # end
 
-
+   menu label: "Regiony"
 end

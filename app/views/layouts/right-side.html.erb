@@ -20,17 +20,7 @@
   <div class="input-group">
   <%= render template: "search/search" %>
   </div>
-  <br \>
-<br \>
-<h3>Tagi</h3>
-<div class="well">
 
-  <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, label| %>
-    <span class="label label-success btn-link"> <%= link_to tag.name, tag_path(tag), :class =>
-                                                                            label %></span>
-  <% end %>
-
-</div>
 <br \>
 <br \>
 

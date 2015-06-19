@@ -9,7 +9,10 @@
         <span class="icon-bar"></span>
 
       </button>
-      <a class="navbar-brand" href="#">"Logo strony"</a>
+      <%= link_to root_path do %>
+          <%= image_tag('logo.png', alt: "Atrakcje przemysłowe Japonii - logo",
+                        class: "navbar-brand") %>
+      <% end %>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">

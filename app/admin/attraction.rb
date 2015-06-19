@@ -29,6 +29,7 @@ ActiveAdmin.register Attraction do
     column :more_info
     actions
   end
+  menu label: "Atrakcje"
 
 end
 
